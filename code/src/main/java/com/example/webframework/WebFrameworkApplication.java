@@ -42,6 +42,13 @@ public class WebFrameworkApplication {
         return new ResponseEntity<>(welcome, HttpStatus.OK);
     }
 
+    @GetMapping("/test")
+    public ResponseEntity<String> test() {
+        String welcome = "marsh-fc test";
+        return new ResponseEntity<>(welcome, HttpStatus.OK);
+    }
+    
+    
     @GetMapping("/fcheaders")
     public ResponseEntity<Map<String, String>> listHeaders(
             @RequestHeader Map<String, String> headers) {

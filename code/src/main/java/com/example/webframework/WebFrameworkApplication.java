@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,7 +31,7 @@ public class WebFrameworkApplication {
                 "<body>" +
                 "<div class=\"website\">" +
                 "<div class=\"ri-t\">" +
-                "<h1>Devsapp</h1>" +
+                "<h1>Marsh-Devsapp Test</h1>" +
                 "<h2>这是一个 marsh-fc测试</h2>" +
                 "<span>自豪的通过Serverless Devs进行部署</span>" +
                 "<br/><p>您也可以快速体验： <br/>" +
@@ -42,7 +43,7 @@ public class WebFrameworkApplication {
         return new ResponseEntity<>(welcome, HttpStatus.OK);
     }
 
-    @GetMapping("/test")
+    @GetMapping("/getTest")
     public ResponseEntity<Map<String, String>> test(String param) {
         Map<String, String> fcHeaders = new HashMap<>();
         fcHeaders.put("code", "200");
@@ -50,6 +51,18 @@ public class WebFrameworkApplication {
         fcHeaders.put("msg", "success");
         return new ResponseEntity<>(fcHeaders, HttpStatus.OK);
     }
+    
+
+    @PostMapping("/postTest")
+    public ResponseEntity<Map<String, String>> postTest(String param) {
+        Map<String, String> fcHeaders = new HashMap<>();
+        fcHeaders.put("code", "200");
+        fcHeaders.put("param", param);
+        fcHeaders.put("msg", "success");
+        return new ResponseEntity<>(fcHeaders, HttpStatus.OK);
+    }
+    
+    
     
     
     @GetMapping("/fcheaders")

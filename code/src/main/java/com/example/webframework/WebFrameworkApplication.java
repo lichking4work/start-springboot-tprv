@@ -31,7 +31,7 @@ public class WebFrameworkApplication {
                 "<body>" +
                 "<div class=\"website\">" +
                 "<div class=\"ri-t\">" +
-                "<h1>Marsh-Devsapp Test</h1>" +
+                "<h1>Marsh</h1>" +
                 "<h2>这是一个 marsh-fc测试</h2>" +
                 "<span>自豪的通过Serverless Devs进行部署</span>" +
                 "<br/><p>您也可以快速体验： <br/>" +

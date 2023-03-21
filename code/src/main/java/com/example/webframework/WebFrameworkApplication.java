@@ -44,7 +44,7 @@ public class WebFrameworkApplication {
     }
 
     @GetMapping("/getTest")
-    public ResponseEntity<Map<String, String>> test(String param) {
+    public ResponseEntity<Map<String, String>> getTest(String param) {
         Map<String, String> fcHeaders = new HashMap<>();
         fcHeaders.put("code", "200");
         fcHeaders.put("param", param);
